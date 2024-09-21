@@ -70,38 +70,22 @@ const gallery = document.querySelector('.gallery');
 images.forEach(({ preview, original, description }) => {
   const galleryItem = 
   `<li class="gallery-item">
-      <a class="gallery-link" href="${original}" download>
-        <img class="gallery-image" src="${preview}" data-source="${original}" alt="${description}" />
+      <a class="gallery-link" href="${original}"npm >
+        <img 
+        class="gallery-image" 
+        src="${preview}" 
+        alt="${description}" />
       </a>
   </li>`;
+
   gallery.insertAdjacentHTML("beforeend", galleryItem);
 });
 
-// 
-
-const lightbox = new SimpleLightbox('.ul.gallery', {
-    captions: true,
-    captionsData: 'alt',
-    captionDelay: 250,
-  });
-
-
-
-// // Описаний в документації
-// import SimpleLightbox from "simplelightbox";
-// // Додатковий імпорт стилів
-// import "simplelightbox/dist/simple-lightbox.min.css";
-
-
-// gallery.addEventListener("click", handleClick);
-// function handleClick(e) {
-//   e.preventDefault();
-//   if (e.target.nodeName !== "IMG") {
-//   return;
-//   }
-//   const largeImage = e.target.dataset.source;
-//   const instance = basicLightbox.create(`
-//       <img src="${largeImage}">
-//     `);
-//   instance.show();
-// }
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+    
+new SimpleLightbox('.gallery a', {
+      captions: true,
+      captionsData: 'alt',
+      captionDelay: 250,
+    });
