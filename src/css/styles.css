@@ -19,7 +19,6 @@
 @import url('./gallery.css') */
 
 
-
 /**
   |============================
   | include css partials with
@@ -28,7 +27,9 @@
 */
 @import url('./reset.css');
 
-/* 1-gallery */
+
+/* gallery */
+
 .gallery {
   width: 1128px;
   display: flex;
@@ -36,12 +37,12 @@
   list-style-type: none;
   gap: 24px;
   margin: 0 auto;
-  padding: 100px 156px;
+  padding: 24px 156px;
 }
 
 .gallery-item {
   width: 360px;
-  height: 300px;
+  height: 200px;
 }
 
 img {
@@ -51,7 +52,7 @@ img {
   height: 100%;
 }
 
-/* 2-form */
+/* form */
 
 .feedback-form {
   display: flex;
@@ -72,7 +73,8 @@ img {
   width: 360px;
 }
 
-.desc {
+.name-text-input
+{
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 16px;
